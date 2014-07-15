@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>PrimeFaces</title>
+</h:head>
+<h:body>
+	<center>
+	 	<p:panel header="LinkedIn using Prime Faces">
+			<h:form>
+				<h:panelGrid columns="2" cellpadding="2">
+					<h:outputLabel value="consumerKey" />
+					<h:inputText value="#{LoginMB.consumerKey}" label="consumerKey"></h:inputText>
+					<h:outputLabel value="consumerSecret" />
+					<h:inputText value="#{LoginMB.consumerSecret}" label="aconsumerSecret"></h:inputText>
+					<h:outputLabel value="accessToken" />
+					<h:inputText value="#{LoginMB.accessToken}" label="accessToken"></h:inputText>
+					<h:outputLabel value="accessTokenSecret" />
+					<h:inputText value="#{LoginMB.accessTokenSecret}" label="accessTokenSecret"></h:inputText>
+					
+					<h:commandButton type="submit" value="Submit"
+						actionListener="#{LoginMB.display}"></h:commandButton>					
+				</h:panelGrid>
+			</h:form>
+		 </p:panel>
+		<div>
+			<h:messages></h:messages>
+		</div>
+	</center>
+</h:body>
+</html>
